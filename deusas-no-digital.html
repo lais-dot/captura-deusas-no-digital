@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deusas no Digital · Mentoria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f5f5;
+    --cream-deep: #ede2cf;
+    --gold: #cfa545;
+    --gold-deep: #a67f2d;
+    --teal: #00795f;
+    --red: #d10707;
+    --ink: #2b1d18;
+    --soft: #5a4a40;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 60px 100px;
+    position: relative;
+  }
+
+  /* TOP */
+  .top {
+    text-align: center;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(54px, 7vw, 88px);
+    font-weight: 600;
+    line-height: 0.95;
+    color: var(--ink);
+    letter-spacing: -1px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--red);
+    font-weight: 600;
+  }
+  .ornament {
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: 14px;
+    margin: 16px 0 12px;
+  }
+  .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--soft);
+    line-height: 1.4;
+    margin: 24px 0 0;
+  }
+  .duration-tag {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 6px 18px;
+    border: 2px solid var(--teal);
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .logo-container {
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 32px;
+  }
+  .logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* GRID PRINCIPAL */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .col h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+  .col .col-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .col .col-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--soft);
+    margin-bottom: 24px;
+  }
+
+  /* METODO LIST */
+  .method-list {
+    list-style: none;
+    margin-bottom: 36px;
+  }
+  .method-list li {
+    padding: 16px 0 16px 36px;
+    border-bottom: 1px dashed rgba(0,121,95,0.25);
+    position: relative;
+    font-size: 15px;
+  }
+  .method-list li:last-child { border-bottom: none; }
+  .method-list .ic {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--gold);
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .method-list strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .method-list span { color: var(--soft); }
+
+  /* AUTONOMIA BLOCK */
+  .autonomia {
+    background: var(--teal);
+    color: var(--cream);
+    padding: 28px 32px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  .autonomia .big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .autonomia .sub {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.85);
+    font-weight: 500;
+  }
+
+  /* ACOMPANHAMENTO */
+  .acomp-block {
+    background: var(--cream-deep);
+    padding: 32px 32px 28px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--gold);
+  }
+  .acomp-block:last-child { margin-bottom: 0; }
+  .acomp-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .acomp-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .acomp-block ul {
+    list-style: none;
+  }
+  .acomp-block li {
+    padding: 8px 0 8px 22px;
+    position: relative;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .acomp-block li::before {
+    content: '☾';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--gold);
+    font-size: 13px;
+  }
+  .acomp-block li strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* BONUS / FOOTER LINE */
+  .bonus {
+    margin-top: 56px;
+    padding: 40px 36px;
+    text-align: center;
+    border-top: 2px solid var(--teal);
+    border-bottom: 2px solid var(--teal);
+  }
+  .bonus p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--teal);
+    line-height: 1.6;
+  }
+  .bonus strong {
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  /* INVESTIMENTO (segunda tela) */
+  .invest-section {
+    background: var(--teal);
+    color: var(--cream);
+    padding: 120px 60px;
+    text-align: center;
+  }
+  .invest-eyebrow {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .invest-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .invest-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: rgba(245,245,245,0.88);
+    margin-bottom: 68px;
+  }
+  .price-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .price-card {
+    padding: 44px 52px;
+    border-radius: 6px;
+    min-width: 280px;
+  }
+  .price-regular {
+    background: rgba(245,245,245,0.08);
+    border: 2px solid rgba(245,245,245,0.2);
+  }
+  .price-regular .label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.6);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .price-regular .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    color: rgba(245,245,245,0.55);
+    text-decoration: line-through;
+    text-decoration-color: var(--gold);
+    font-weight: 600;
+  }
+  .price-promo {
+    background: var(--cream);
+    color: var(--teal);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .price-promo::before {
+    content: '✦ ENTRANDO EM MAIO ✦';
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--red);
+    color: var(--cream);
+    padding: 8px 22px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    border-radius: 999px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .price-promo .label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .price-promo .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 78px;
+    color: var(--teal);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .price-promo .amount-sub {
+    font-size: 13px;
+    color: var(--soft);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .page { padding: 40px 28px; }
+    .main-grid { grid-template-columns: 1fr; gap: 32px; }
+    .price-stack { flex-direction: column; gap: 32px; }
+    .price-promo { transform: none; }
+    .price-card { padding: 36px 28px; min-width: auto; width: 100%; }
+  }
+
+  @media print {
+    body { background: white; }
+    .invest-section { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ONE PAGER -->
+<div class="page">
+
+  <div class="top">
+    <div class="logo-container">
+      <img src="logo-deusas.png" alt="Deusas no Digital">
+    </div>
+    <div class="ornament">✦ ☾ ✦</div>
+    <p class="tagline">Uma jornada de 12 meses<br>sendo mentorada no método <strong>Espiral de Vênus</strong></p>
+    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--soft); margin-top: 20px;">Elevando e expandindo o seu negócio em movimentos Yin e Yang.</p>
+
+    <div style="max-width: 380px; margin: 36px auto 0; text-align: center;">
+      <img src="5pilaresdeusas.png" alt="5 Pilares Deusas" style="width: 100%; height: auto; display: block;">
+    </div>
+  </div>
+
+  <div class="main-grid">
+
+    <!-- COL ESQUERDA: ENTREGAS DO MÉTODO -->
+    <div class="col">
+      <div class="col-eyebrow">⬩ O que você recebe</div>
+
+      <ul class="method-list">
+        <li>
+          <span class="ic">☯</span>
+          <strong>Método gravado</strong>
+          <span>Práticas, ensinamentos e tutoriais — incluindo como usar cada ferramenta.</span>
+        </li>
+        <li>
+          <span class="ic">✦</span>
+          <strong>Apostila digital (imprimível)</strong>
+          <span>Com o sistema de organização pra estruturar o seu negócio.</span>
+        </li>
+        <li>
+          <span class="ic">◐</span>
+          <strong>Aplicativo na web</strong>
+          <span>Pra planejar conteúdos, criar roteiros e analisar resultados.</span>
+        </li>
+        <li>
+          <span class="ic">❀</span>
+          <strong>Modelos prontos</strong>
+          <span>De conteúdo, scripts de venda e organização — pra não começar do branco.</span>
+        </li>
+      </ul>
+
+      <div class="autonomia">
+        <div class="big">→ Autonomia.</div>
+        <div class="sub">+ Acompanhamento & Antissabotagem</div>
+      </div>
+    </div>
+
+    <!-- COL DIREITA: ACOMPANHAMENTO -->
+    <div class="col">
+      <div class="col-eyebrow">⬩ Acompanhamento</div>
+      <h2>Em grupo & individual</h2>
+      <p class="col-desc">Foco real na sua evolução — coletivo e personalizado.</p>
+
+      <div class="acomp-block">
+        <span class="acomp-tag">Coletivo</span>
+        <h3>Em Grupo</h3>
+        <ul>
+          <li><strong>Encontros quinzenais</strong> — dúvidas, direcionamentos, análises, referências e insights.</li>
+          <li><strong>Imersões a cada 2 meses</strong> — comunicação, vendas ou estrutura.</li>
+          <li><strong>Comunidade das Deusas</strong> — rede viva de mulheres construindo no digital.</li>
+        </ul>
+      </div>
+
+      <div class="acomp-block">
+        <span class="acomp-tag">Personalizado</span>
+        <h3>Individual</h3>
+        <ul>
+          <li><strong>WhatsApp comigo + equipe</strong> — analisamos o que você está fazendo e te damos direcionamento a cada passo.</li>
+          <li><strong>3 encontros individuais</strong> em momentos-chave: olhar pro seu negócio e organizar os próximos passos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus">
+    <p>Vai ter mais? <strong>Sim.</strong> &nbsp;·&nbsp; manifestação · ciclicidade · criatividade · e tudo o que pulsar entre nós nesses 12 meses.</p>
+  </div>
+
+</div>
+
+<!-- INVESTIMENTO (separado) -->
+<section class="invest-section">
+  <div class="invest-eyebrow">⬩ Investimento</div>
+  <h2 class="invest-title">Pra entrar na mentoria</h2>
+  <p class="invest-sub">12 meses de transformação completa</p>
+
+  <div class="price-stack">
+    <div class="price-card price-regular">
+      <div class="label">Valor regular</div>
+      <div class="amount">R$ 5.000</div>
+    </div>
+
+    <div class="price-card price-promo">
+      <div class="label">Condição especial</div>
+      <div class="amount">R$ 3.000</div>
+      <div class="amount-sub">para quem entra em maio</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

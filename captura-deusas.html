@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deusas no Digital · Mentoria para Negócios Holísticos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f5f5;
+    --cream-deep: #ede2cf;
+    --cream-soft: #faf6ec;
+    --gold: #cfa545;
+    --gold-deep: #a67f2d;
+    --teal: #00795f;
+    --teal-deep: #005842;
+    --teal-dark: #003c2c;
+    --red: #d10707;
+    --ink: #2b1d18;
+    --soft: #5a4a40;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 32px 100px;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(207,165,69,0.10) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0,121,95,0.08) 0%, transparent 50%),
+      var(--cream);
+  }
+  .hero-inner { max-width: 820px; }
+  .logo-hero {
+    max-width: 200px;
+    margin: 0 auto 40px;
+  }
+  .logo-hero img { width: 100%; height: auto; display: block; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--teal);
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-style: italic;
+    color: var(--soft);
+    margin: 0 auto 48px;
+    max-width: 620px;
+    line-height: 1.5;
+  }
+  .ornament {
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: 14px;
+    margin: 32px 0;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 20px 44px;
+    background: var(--teal);
+    color: var(--cream);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 2px solid var(--teal);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .cta-button:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(207,165,69,0.3);
+  }
+  .cta-button.gold {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .cta-button.gold:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+
+  /* ============ SECTION BASE ============ */
+  section {
+    padding: 100px 32px;
+  }
+  .section-eyebrow {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .section-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4.2vw, 52px);
+    font-weight: 500;
+    color: var(--teal);
+    margin-bottom: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+  .section-intro {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 21px;
+    color: var(--soft);
+    max-width: 640px;
+    margin: 0 auto 48px;
+    line-height: 1.5;
+  }
+
+  /* ============ PRA QUEM É ============ */
+  .pra-quem { background: var(--cream-soft); }
+  .quem-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .quem-list li {
+    padding: 24px 0 24px 48px;
+    border-bottom: 1px dashed rgba(0,121,95,0.25);
+    position: relative;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .quem-list li:last-child { border-bottom: none; }
+  .quem-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 22px;
+    color: var(--gold);
+    font-size: 20px;
+  }
+  .quem-list strong {
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* ============ DOR LATENTE ============ */
+  .dor {
+    background: var(--cream-deep);
+  }
+  .dor-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+  .dor-list li {
+    padding: 18px 0 18px 36px;
+    position: relative;
+    font-size: 17px;
+    color: var(--soft);
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+  }
+  .dor-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    color: var(--gold);
+    font-style: normal;
+  }
+  .dor-virada {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 3vw, 32px);
+    color: var(--teal);
+    font-weight: 500;
+    max-width: 620px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 2px solid var(--gold);
+    line-height: 1.4;
+  }
+  .dor-virada em { font-style: italic; color: var(--gold-deep); }
+
+  /* ============ A VIRADA ============ */
+  .virada {
+    background: var(--teal);
+    color: var(--cream);
+  }
+  .virada .section-eyebrow { color: var(--gold); }
+  .virada .section-title { color: var(--cream); }
+  .virada .section-title em { color: var(--gold); }
+  .virada .section-intro { color: rgba(245,245,245,0.85); }
+  .virada-list {
+    list-style: none;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .virada-list li {
+    padding: 28px 0 28px 56px;
+    border-bottom: 1px solid rgba(207,165,69,0.25);
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .virada-list li:last-child { border-bottom: none; }
+  .virada-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 26px;
+    color: var(--gold);
+    font-size: 22px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .virada-list strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    color: var(--gold);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ============ MÉTODO ============ */
+  .metodo {
+    background: var(--cream-soft);
+    text-align: center;
+  }
+  .metodo-img {
+    max-width: 480px;
+    margin: 0 auto 40px;
+  }
+  .metodo-img img { width: 100%; height: auto; display: block; }
+  .metodo-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--soft);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    line-height: 1.55;
+  }
+
+  /* ============ SÍNTESE ============ */
+  .sintese {
+    background: var(--teal-dark);
+    color: var(--cream);
+    text-align: center;
+  }
+  .sintese .section-eyebrow { color: var(--gold); }
+  .sintese .section-title {
+    color: var(--cream);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .sintese .section-title em { color: var(--gold); font-style: italic; }
+  .sintese .subline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--gold);
+    margin-bottom: 48px;
+  }
+  .sintese-prose {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .sintese-prose p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.65;
+    color: rgba(245,245,245,0.92);
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+  .sintese-prose p.center {
+    text-align: center;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 26px;
+    margin: 40px 0;
+  }
+  .sintese-prose strong {
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* ============ SOBRE ============ */
+  .sobre {
+    background: var(--cream);
+  }
+  .sobre-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sobre-foto {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    background: var(--cream-deep);
+    border: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--soft);
+    font-size: 14px;
+    overflow: hidden;
+  }
+  .sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+  }
+  .sobre-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .sobre-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--gold-deep);
+    margin-bottom: 36px;
+  }
+  .sobre-bio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--ink);
+    line-height: 1.75;
+    text-align: left;
+    max-width: 680px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+  .sobre-bio p { margin-bottom: 20px; }
+  .sobre-bio strong { color: var(--teal); font-weight: 500; }
+
+  /* ============ DEPOIMENTOS ============ */
+  .depoimentos {
+    background: var(--cream-deep);
+  }
+  .depo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) {
+    .depo-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+    }
+  }
+  @media (max-width: 600px) {
+    .depo-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+    .depo-card:nth-child(5) {
+      margin-top: 0;
+    }
+  }
+  .depo-card {
+    background: var(--cream);
+    padding: 40px 40px 36px;
+    border-radius: 6px;
+    border-left: 4px solid var(--gold);
+    position: relative;
+  }
+  .depo-card::before {
+    content: '"';
+    position: absolute;
+    top: 8px;
+    right: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 1;
+  }
+  .depo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .depo-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .depo-image {
+    padding: 0;
+    background: transparent;
+    border-left: none;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .depo-image::before {
+    display: none;
+  }
+  .depo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  .depo-card:nth-child(5) {
+    margin-top: -140px;
+  }
+
+  /* ============ FAQ ============ */
+  .faq {
+    background: var(--cream-soft);
+  }
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(0,121,95,0.2);
+    padding: 8px 0;
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 24px 48px 24px 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--teal);
+    font-weight: 500;
+    position: relative;
+    user-select: none;
+    transition: color 0.2s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 26px;
+    font-weight: 300;
+    transition: transform 0.3s;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+    transform: translateY(-50%) rotate(0deg);
+  }
+  .faq-item summary:hover { color: var(--gold-deep); }
+  .faq-item .faq-answer {
+    padding: 0 48px 24px 8px;
+    font-size: 16px;
+    color: var(--soft);
+    line-height: 1.7;
+  }
+  .faq-item .faq-answer strong { color: var(--teal); font-weight: 600; }
+  .faq-item .faq-answer ul {
+    list-style: none;
+    margin-top: 12px;
+  }
+  .faq-item .faq-answer ul li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+  }
+  .faq-item .faq-answer ul li::before {
+    content: '·';
+    position: absolute;
+    left: 8px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ============ FORM ============ */
+  .form-section {
+    background: var(--cream);
+    padding: 100px 32px 130px;
+  }
+  .form-container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .form-card {
+    background: var(--cream-soft);
+    padding: 56px 48px;
+    border-radius: 8px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+    margin-top: 40px;
+    border-top: 4px solid var(--gold);
+  }
+  .form-group {
+    margin-bottom: 28px;
+  }
+  .form-group label.field-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .form-group label .req { color: var(--red); }
+  .field-hint {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--soft);
+    margin: -4px 0 12px;
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid rgba(0,121,95,0.2);
+    border-radius: 4px;
+    background: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    background: var(--cream-soft);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+    font-family: 'Inter', sans-serif;
+  }
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .radio-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    font-weight: 400;
+    cursor: pointer;
+    padding: 14px 16px;
+    border: 1.5px solid rgba(0,121,95,0.15);
+    border-radius: 4px;
+    background: var(--cream);
+    transition: all 0.2s;
+    line-height: 1.45;
+  }
+  .radio-group label:hover {
+    border-color: var(--teal);
+    background: var(--cream-soft);
+  }
+  .radio-group input[type="radio"],
+  .radio-group input[type="checkbox"] {
+    width: auto;
+    margin: 3px 0 0;
+    accent-color: var(--teal);
+    flex-shrink: 0;
+  }
+  .form-submit {
+    width: 100%;
+    padding: 22px 32px;
+    background: var(--teal);
+    color: var(--cream);
+    border: 2px solid var(--teal);
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s;
+  }
+  .form-submit:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(207,165,69,0.3);
+  }
+  .form-disclaimer {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--soft);
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+  .form-status {
+    margin-top: 24px;
+    padding: 20px 24px;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.5;
+    display: none;
+  }
+  .form-status.success {
+    background: rgba(0,121,95,0.08);
+    border: 1.5px solid var(--teal);
+    color: var(--teal);
+    display: block;
+  }
+  .form-status.error {
+    background: rgba(209,7,7,0.06);
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    display: block;
+  }
+  .form-status .title {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--teal);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    background: var(--teal-dark);
+    color: var(--cream);
+    text-align: center;
+    padding: 90px 32px 60px;
+  }
+  .footer-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(26px, 3.4vw, 36px);
+    color: var(--gold);
+    max-width: 700px;
+    margin: 0 auto 32px;
+    line-height: 1.35;
+  }
+  .footer-ornament {
+    color: var(--gold);
+    letter-spacing: 18px;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .footer-credit {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.5);
+    margin-top: 40px;
+  }
+
+  /* ============ CTA MID ============ */
+  .cta-mid {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 720px) {
+    section { padding: 80px 24px; }
+    .hero { padding: 60px 24px 80px; }
+    .form-card { padding: 36px 28px; }
+    .depo-card { padding: 32px 28px 28px; }
+    .sobre-foto { width: 160px; height: 160px; }
+    .sintese-prose p { font-size: 19px; }
+    .sintese-prose p.center { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="logo-hero">
+      <img src="logo-deusas.png" alt="Deusas no Digital">
+    </div>
+    <div class="eyebrow">Mentoria para Negócios Holísticos</div>
+    <h1>Expanda o seu negócio holístico junto com a sua <em>expansão interna</em></h1>
+    <p class="hero-sub">Estruture o seu servir com a profundidade que te trouxe até aqui.</p>
+    <div class="ornament">✦ ☾ ✦</div>
+    <a href="#formulario" class="cta-button">Aplique pro Deusas no Digital</a>
+  </div>
+</section>
+
+<!-- ============ PRA QUEM É ============ -->
+<section class="pra-quem">
+  <div class="container">
+    <div class="section-eyebrow">⬩ O chamado</div>
+    <h2 class="section-title">Pra você que <em>já caminha</em></h2>
+    <p class="section-intro">Você já atua como terapeuta e carrega o ofício no corpo. Pode estar no zero no digital ou já ter tentado. O que importa é que sente que é hora de expandir.</p>
+
+    <ul class="quem-list">
+      <li>Recusa <strong>se encaixar em moldes</strong> pra crescer no digital. Quer expandir a verdade e o valor que já carrega na sua história e no seu conhecimento.</li>
+      <li>Quer estruturar um <strong>negócio holístico com previsibilidade e abundância</strong>. Sem se trair pra vender, sem cair em fórmulas vazias.</li>
+      <li>Sabe que <strong>o digital também é templo</strong>. E quer subir nele inteira, com a sua verdade.</li>
+      <li>Sente que tem <strong>muito mais a oferecer</strong> do que está conseguindo traduzir hoje.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ DOR LATENTE ============ -->
+<section class="dor">
+  <div class="container">
+    <div class="section-eyebrow">⬩ A passagem que cansou</div>
+    <h2 class="section-title">Você já tentou e sentiu que <em>voltou pro ponto de partida</em></h2>
+
+    <ul class="dor-list">
+      <li>Já investiu em social media, tráfego ou cursos enlatados e a transformação prometida nunca veio.</li>
+      <li>Tentou viralizar, mas o seu trabalho exige uma profundidade que não cabe em formatos prontos.</li>
+      <li>Atende com frequência, mas escalar parece sinônimo de se sobrecarregar.</li>
+      <li>Tem uma lista ampla de serviços e sente que perdeu o foco do que realmente vibra com você.</li>
+    </ul>
+
+    <p class="dor-virada">O que você precisa não é mais uma <em>fórmula</em>.<br>É uma <em>alquimia</em>.</p>
+  </div>
+</section>
+
+<!-- ============ A VIRADA ============ -->
+<section class="virada">
+  <div class="container">
+    <div class="section-eyebrow">⬩ A transmutação</div>
+    <h2 class="section-title">O que muda no seu negócio <em>de verdade</em></h2>
+    <p class="section-intro">Resultados concretos que se manifestam quando estratégia e profundidade caminham juntas.</p>
+
+    <ul class="virada-list">
+      <li>
+        <strong>Posicionamento que atrai o público certo</strong>
+        Clareza na sua mensagem, autenticidade no conteúdo. Você se posiciona e atrai quem está pronto pra comprar de você.
+      </li>
+      <li>
+        <strong>Estrutura digital com método</strong>
+        Conteúdo, captação e vendas organizados num sistema que funciona pra você, mesmo quando não está online.
+      </li>
+      <li>
+        <strong>Comunicação que converte sem forçar</strong>
+        Você traduz a profundidade do seu trabalho em conteúdo que conecta, engaja e vende com naturalidade.
+      </li>
+      <li>
+        <strong>Vendas com previsibilidade e rentabilidade</strong>
+        Clientes chegando de forma constante. Faturamento que te permite planejar e investir no seu crescimento.
+      </li>
+      <li>
+        <strong>Liberdade de tempo e território</strong>
+        O negócio sustentando a vida que você escolhe viver, de onde estiver.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MÉTODO ============ -->
+<section class="metodo">
+  <div class="container">
+    <div class="section-eyebrow">⬩ O método</div>
+    <h2 class="section-title"><em>Espiral de Vênus</em></h2>
+    <p class="section-intro">Elevando e expandindo o seu negócio em movimentos Yin e Yang.</p>
+
+    <div class="metodo-img">
+      <img src="5pilaresdeusas.png" alt="5 Pilares da Espiral de Vênus">
+    </div>
+
+    <p class="metodo-desc">Cinco pilares que tecem uma espiral viva: consciência, posicionamento, estrutura, faturamento e crescimento. Um caminho que respeita os seus ciclos e expande o que já é seu.</p>
+
+    <div class="cta-mid">
+      <a href="#formulario" class="cta-button gold">Aplique pro Deusas no Digital</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SÍNTESE ============ -->
+<section class="sintese">
+  <div class="container">
+    <div class="section-eyebrow">⬩ A integração</div>
+    <h2 class="section-title">Estratégia <em>com</em> profundidade</h2>
+    <p class="subline">A integração que te leva pro próximo nível.</p>
+
+    <div class="sintese-prose">
+      <p>O mercado divide o que sempre foi um. De um lado, <strong>marketing técnico</strong> que ignora a alma do seu trabalho. Do outro, <strong>espiritualidade sem estrutura</strong> de negócio.</p>
+      <p class="center">Deusas no Digital integra os dois.</p>
+      <p>Estratégia com alma. Estrutura com fluidez. Crescimento com verdade. Você não precisa escolher entre ser profunda e ser lucrativa. Aqui, você é as duas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="sobre">
+  <div class="container">
+    <div class="section-eyebrow">⬩ Quem te conduz</div>
+    <div class="sobre-grid">
+      <div class="sobre-foto">
+        <img src="foto-lais.JPEG" alt="Laís Hara">
+      </div>
+      <div class="sobre-nome">Laís Hara</div>
+      <p class="sobre-tagline">Estrategista, mentora e iniciada nos mistérios do feminino</p>
+      <div class="sobre-bio">
+        <p>Mais de 10 anos na liderança de <strong>estratégia, marketing e construção de marcas</strong>. Laís Hara largou o topo corporativo pra viver a sua causa: romper o modelo masculino de crescimento que afasta mulheres do seu trono e da prosperidade real nos seus negócios.</p>
+        <p>Formada em <strong>PNL, coaching e análise comportamental</strong>. Imersa em <strong>alquimia, física quântica e os mistérios do feminino</strong>.</p>
+        <p>Criou o Deusas no Digital porque sabe que existe um caminho onde a mulher não precisa se desmontar pra crescer. Onde a <strong>ciclicidade sustenta constância</strong>, a intuição fortalece a estratégia, a essência vira posicionamento e a <strong>força criativa do feminino</strong> se torna o motor do negócio. Não é sobre encaixar você num modelo. É sobre o modelo nascer de quem você é e do que veio fazer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-eyebrow">⬩ Vozes do círculo</div>
+    <h2 class="section-title">O que dizem as <em>Deusas</em></h2>
+    <p class="section-intro">Mulheres que entraram, se transmutaram, e hoje servem com estrutura e abundância.</p>
+
+    <div class="depo-grid">
+
+      <!-- DEPOIMENTO 1 -->
+      <div class="depo-card depo-image">
+        <img src="depo1.png" alt="Depoimento 1">
+      </div>
+
+      <!-- DEPOIMENTO 2 -->
+      <div class="depo-card depo-image">
+        <img src="depo2.png" alt="Depoimento 2">
+      </div>
+
+      <!-- DEPOIMENTO 3 -->
+      <div class="depo-card depo-image">
+        <img src="depo4.png" alt="Depoimento 3">
+      </div>
+
+      <!-- DEPOIMENTO 4 -->
+      <div class="depo-card depo-image">
+        <img src="depo5.png" alt="Depoimento 4">
+      </div>
+
+      <!-- DEPOIMENTO 5 -->
+      <div class="depo-card depo-image">
+        <img src="depo6.png" alt="Depoimento 5">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-eyebrow">⬩ Pra clarear a passagem</div>
+    <h2 class="section-title">Perguntas <em>frequentes</em></h2>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Pra quem é o Deusas no Digital?</summary>
+        <div class="faq-answer">
+          Pra quem já atua como terapeuta e quer estruturar o seu servir como negócio holístico no digital, sem perder profundidade. Pra quem busca <strong>posicionamento autêntico, previsibilidade e expansão</strong> a partir da sua verdade. Mesmo que esteja começando do zero no digital.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Pra quem NÃO é?</summary>
+        <div class="faq-answer">
+          Com honestidade:
+          <ul>
+            <li>Ainda não atua como terapeuta na prática.</li>
+            <li>Busca só viralizar, sem profundidade.</li>
+            <li>Quer terceirizar a comunicação ao invés de aprender a ocupar o seu lugar.</li>
+            <li>Não está pronta pra investir tempo, presença e recursos no próprio negócio.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>É 100% online?</summary>
+        <div class="faq-answer">
+          Sim. Encontros, imersões, atendimento individual e acesso ao método são todos online. Pra que você possa caminhar de onde estiver.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Quanto custa?</summary>
+        <div class="faq-answer">
+          O investimento varia conforme as entregas que a gente fecha no nosso encontro, sempre alinhadas com a sua possibilidade e necessidade. Por isso, é importante você preencher a aplicação pra gente entender o seu momento e definir o que faz mais sentido pra você agora. Não tem pegadinha, não tem surpresa. É transparência desde o começo. <a href="#formulario" style="color: var(--teal); font-weight: 600; text-decoration: underline;">Aplique pra gente conversar.</a>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="form-section" id="formulario">
+  <div class="form-container">
+    <div class="section-eyebrow">⬩ Aplicação</div>
+    <h2 class="section-title">Aplique pro <em>Deusas no Digital</em></h2>
+    <p class="section-intro">Conta sobre você. Se vibrarmos juntas, eu te chamo pra uma conversa.</p>
+
+    <form id="aplicacao-form" class="form-card">
+
+      <div class="form-group">
+        <label class="field-label">Seu nome e @ do Instagram <span class="req">*</span></label>
+        <input type="text" name="nome_instagram" placeholder="Ex: Maria Silva · @maria.silva" required>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">E-mail <span class="req">*</span></label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">WhatsApp <span class="req">*</span></label>
+        <span class="field-hint">Verifique se colocou o número corretamente. É por aqui que entro em contato se você for selecionada.</span>
+        <input type="tel" name="whatsapp" placeholder="(11) 99999-9999" required>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Como você atua hoje no autoconhecimento e na espiritualidade? <span class="req">*</span></label>
+        <span class="field-hint">Conta de forma direta com quem você trabalha e como.</span>
+        <textarea name="atuacao" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Onde seu negócio está hoje? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="estado_negocio" value="atendo-frequencia" required> Já atendo com frequência, mas quero faturar mais sem sobrecarregar minha agenda</label>
+          <label><input type="radio" name="estado_negocio" value="investi-sem-resultado"> Já investi em social media, tráfego ou cursos, mas sem resultados e direção estratégica</label>
+          <label><input type="radio" name="estado_negocio" value="muitos-servicos"> Tenho uma lista ampla de serviços e me sinto sobrecarregada ou sem foco</label>
+          <label><input type="radio" name="estado_negocio" value="fisico-pro-digital"> Tenho um negócio físico bem-sucedido e quero escalar pro digital</label>
+          <label><input type="radio" name="estado_negocio" value="audiencia-sem-vendas"> Tenho audiência, mas não consigo vender com consistência</label>
+          <label><input type="radio" name="estado_negocio" value="indicacao-pro-digital"> Capto clientes por indicação e quero expandir pra captar no digital</label>
+          <label><input type="radio" name="estado_negocio" value="outro"> Outro (explico no final)</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Quais são seus desafios no digital? <span class="req">*</span></label>
+        <span class="field-hint">Pode marcar mais de uma.</span>
+        <div class="radio-group">
+          <label><input type="checkbox" name="desafios" value="comunicar-clareza"> Me comunicar com clareza sem parecer superficial</label>
+          <label><input type="checkbox" name="desafios" value="vender-consistencia"> Vender com consistência sem me sentir forçando</label>
+          <label><input type="checkbox" name="desafios" value="posicionar-autenticidade"> Me posicionar com autenticidade e estratégia</label>
+          <label><input type="checkbox" name="desafios" value="produto-estrategico"> Transformar minha experiência em um produto estratégico com maior retorno financeiro</label>
+          <label><input type="checkbox" name="desafios" value="outro"> Outro (conto no final)</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">O que você quer transmutar nos próximos 12 meses? <span class="req">*</span></label>
+        <span class="field-hint">Pode contar do seu momento, do que está pulsando aí dentro e do que sente que precisa mudar.</span>
+        <textarea name="transmutar" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Você se sente pronta pra investir agora? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="prontidao" value="pronta-financeiramente" required> Sim. Estou pronta inclusive financeiramente</label>
+          <label><input type="radio" name="prontidao" value="organizar-30-dias"> Ainda não estou pronta pra investir agora, mas quero me organizar pra começar em até 30 dias</label>
+          <label><input type="radio" name="prontidao" value="quero-entender"> Quero muito, mas preciso entender melhor antes</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Qual investimento mensal você consegue fazer hoje? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="investimento" value="ate-1k" required> Até R$1k/mês</label>
+          <label><input type="radio" name="investimento" value="1k-2k"> Entre R$1k e R$2k se for muito personalizado</label>
+          <label><input type="radio" name="investimento" value="acima-2k"> Acima de R$2k/mês se houver entregas feitas para mim</label>
+          <label><input type="radio" name="investimento" value="abaixo-500"> Abaixo de R$500</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="field-label">Algo mais que queira me contar?</label>
+        <span class="field-hint">Esse espaço é seu. Use se sentir vontade.</span>
+        <textarea name="outro" placeholder=""></textarea>
+      </div>
+
+      <button type="submit" class="form-submit" id="submit-btn">Enviar minha aplicação</button>
+
+      <p class="form-disclaimer">Sua aplicação chega direto pra mim. Se vibrarmos juntas, te chamo pra conversar.</p>
+
+      <div class="form-status" id="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-ornament">✦ ☾ ✦</div>
+  <p class="footer-quote">O digital também é templo.<br>E você merece subir nele <em>inteira</em>.</p>
+  <div class="footer-ornament">✦ ☾ ✦</div>
+  <p class="footer-credit">Deusas no Digital · Laís Hara</p>
+</footer>
+
+<script>
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwk5zJV292RicBYwvK5Y4ZjlEFN8RgZ9XMFbOtm13Cc869n-kB5xifItfeuI8EhRs4jzg/exec';
+
+  const form = document.getElementById('aplicacao-form');
+  const status = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Reset status
+    status.className = 'form-status';
+    status.innerHTML = '';
+
+    // Pegar todos os dados do form
+    const formData = new FormData(form);
+    const data = {};
+
+    // Para checkboxes (desafios) - pega todos os marcados
+    const desafios = formData.getAll('desafios');
+    data.desafios = desafios.join(', ');
+
+    // Para os outros campos
+    for (let [key, value] of formData.entries()) {
+      if (key !== 'desafios') {
+        data[key] = value;
+      }
+    }
+
+    // Adicionar timestamp
+    data.timestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+    // Desabilitar botão
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      // Enviar pro Google Apps Script
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(data)
+      });
+
+      // Check if response is OK
+      if (response.ok || response.status === 200) {
+        status.className = 'form-status success';
+        status.innerHTML = '<span class="title">✦ Sua aplicação foi recebida ✦</span>Em breve eu mesma leio com atenção. Se vibrarmos juntas, te chamo pra conversar.';
+        form.reset();
+        submitBtn.style.display = 'none';
+
+        // Scroll suave pra mensagem
+        status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error(`Server responded with status ${response.status}`);
+      }
+
+    } catch (err) {
+      console.error('Form submission error:', err);
+      status.className = 'form-status error';
+      status.innerHTML = '<span class="title">Ops, algo não fluiu</span>Tente novamente em instantes ou me chame no WhatsApp direto.';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar minha aplicação';
+    }
+  });
+</script>
+
+</body>
+</html>
